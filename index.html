@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('car-hero-image.jpg') no-repeat center center/cover;
+            height: 500px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services, .about-us {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-item, .about-item {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .service-item img, .about-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation Menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Book Your Ride with Ease</h1>
+        <p>Explore a wide variety of vehicles and book your next journey today!</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <img src="service1.jpg" alt="Car Booking">
+            <h3>Car Booking</h3>
+            <p>Choose from a wide selection of cars for your next trip.</p>
+        </div>
+        <div class="service-item">
+            <img src="service2.jpg" alt="Luxury Cars">
+            <h3>Luxury Cars</h3>
+            <p>Experience the luxury and comfort with our premium fleet.</p>
+        </div>
+        <div class="service-item">
+            <img src="service3.jpg" alt="Corporate Rentals">
+            <h3>Corporate Rentals</h3>
+            <p>Book vehicles for your business needs and meetings.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <div class="about-item">
+            <img src="about1.jpg" alt="Why Choose Us">
+            <h3>Why Choose Us?</h3>
+            <p>We offer affordable, reliable, and convenient booking services.</p>
+        </div>
+        <div class="about-item">
+            <img src="about2.jpg" alt="Our Fleet">
+            <h3>Our Fleet</h3>
+            <p>Explore our wide range of vehicles for every need and occasion.</p>
+        </div>
+        <div class="about-item">
+            <img src="about3.jpg" alt="Customer Satisfaction">
+            <h3>Customer Satisfaction</h3>
+            <p>We prioritize customer satisfaction with excellent service and support.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Automobile Booking Co. | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
