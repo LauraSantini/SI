@@ -1,0 +1,30 @@
+CREATE DATABASE ReservationSystem;
+GO
+
+USE ReservationSystem;
+GO
+
+CREATE TABLE Users (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+    Username NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    Password NVARCHAR(100) NOT NULL,
+    CreatedAt DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE Reservations (
+    ReservationID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    ReservationDate DATETIME NOT NULL,
+    AmountPaid DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+CREATE TABLE Credits (
+    CreditID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    TotalCredits DECIMAL(10, 2) NOT NULL DEFAULT 0,
+    LastUpdated DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+GO

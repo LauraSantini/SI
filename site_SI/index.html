@@ -4,93 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automobile Booking</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Navigation Bar */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-        }
-
-        header nav ul li {
-            margin: 0 20px;
-        }
-
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        header nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: url('car-hero-image.jpg') no-repeat center center/cover;
-            height: 500px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 50px;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .services, .about-us {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .service-item, .about-item {
-            width: 30%;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .service-item img, .about-item img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -108,10 +22,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Book Your Ride with Ease</h1>
+    <div class="hero">
+        <img src="images/vehicles.hero.jpg" alt="vehicles_hero" width="100%"> 
+        <h1>Fast & Furious</h1>
+        <h2>Cars Inc.</h2>
         <p>Explore a wide variety of vehicles and book your next journey today!</p>
-    </section>
+    </div>
 
     <!-- Services Section -->
     <section class="services">

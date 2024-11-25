@@ -1,4 +1,4 @@
-/* Resetting some default styling */
+/* Resetando o estilo básico */
 * {
     margin: 0;
     padding: 0;
@@ -7,19 +7,19 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: #333;
 }
 
-/* Header Styling */
+/* Estilos do Cabeçalho */
 header {
-    background-color: #1A1A1A; /* Dark black background */
+    background-color: #333; /* Cor de fundo escura */
     color: white;
-    padding: 15px 0;
+    padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para o cabeçalho */
 }
 
 header nav ul {
@@ -38,43 +38,70 @@ header nav ul li a {
     text-decoration: none;
     font-size: 18px;
     padding: 5px 10px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Efeito de transição */
 }
 
 header nav ul li a:hover {
-    background-color: #FF6F00; /* Orange background on hover */
+    background-color: #FF6F00; /* Cor de fundo laranja no hover */
     border-radius: 4px;
 }
 
-/* Hero Section Styling */
+/* Estilo da Seção Hero */
 .hero {
-    background: url('car-hero-image.jpg') no-repeat center center/cover;
-    height: 500px;
+    background: url('images/vehicles.hero.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire section */
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the page */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
+    position: relative; /* Allow child elements to be positioned absolutely within */
 }
 
 .hero h1 {
+    position: absolute; 
+    top:45%;
+    left:50%;
+    transform: translate(-50%, -50%); /* Center the text */
     font-size: 60px;
-    color: #FF6F00; /* Orange */
+    color: #FF6F00; /* Laranja */
+    z-index: 1; /* Ensure text appears above the background image */
+}
+
+.hero h2 {
+
+    position: absolute; 
+    top:55%;
+    left:50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    font-size: 40px;
+    color: #FF6F00; /* Laranja */
+    z-index: 1; /* Ensure text appears above the background image */
+
 }
 
 .hero p {
+    position: absolute; 
+    top:65%;
+    text-align:center;
     font-size: 20px;
     color: white;
+    z-index: 1; /* Ensures the paragraph is also above the background */
 }
 
-/* Section Styling */
+/* Estilos das Seções Gerais */
 section {
+    position: relative;
     padding: 50px 20px;
     text-align: center;
 }
 
-/* Services Section */
+/* Estilo da Seção de Serviços */
 .services {
+    padding-top: 10%;
+    position: relative;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -85,15 +112,15 @@ section {
     width: 30%;
     margin-bottom: 20px;
     text-align: center;
-    border: 2px solid #FF6F00;
+    border: 2px solid #FF6F00; /* Cor laranja para bordas */
     padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Efeito de transformação */
 }
 
 .service-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra no hover */
 }
 
 .service-item img {
@@ -103,15 +130,15 @@ section {
 }
 
 .service-item h3 {
-    color: #1A1A1A; /* Dark gray for headings */
+    color: #333; /* Cor do texto do título */
     margin-top: 15px;
 }
 
 .service-item p {
-    color: #555;
+    color: #555; /* Cor mais clara para o parágrafo */
 }
 
-/* About Us Section */
+/* Estilo da Seção Sobre Nós */
 .about-us {
     display: flex;
     justify-content: space-around;
@@ -132,7 +159,7 @@ section {
 }
 
 .about-item h3 {
-    color: #FF6F00; /* Orange */
+    color: #FF6F00; /* Cor laranja */
     margin-top: 15px;
 }
 
@@ -140,9 +167,9 @@ section {
     color: #333;
 }
 
-/* Footer Styling */
+/* Estilo do Rodapé */
 footer {
-    background-color: #1A1A1A; /* Dark black background */
+    background-color: #333; /* Cor escura */
     color: white;
     padding: 20px;
     text-align: center;
@@ -150,26 +177,26 @@ footer {
 
 footer p {
     font-size: 14px;
-    color: #bbb; /* Light gray text */
+    color: #bbb; /* Cor clara no texto do rodapé */
 }
 
-/* Button Styling (e.g. for booking buttons) */
+/* Estilos de Botões (Ex: Botão de Reserva) */
 button {
-    background-color: #FF6F00; /* Orange */
+    background-color: #FF6F00; /* Cor laranja */
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Efeito de transição */
 }
 
 button:hover {
-    background-color: #E65100; /* Darker orange */
+    background-color: #E65100; /* Cor laranja mais escura no hover */
 }
 
-/* Responsive Design */
+/* Estilos Responsivos */
 @media (max-width: 768px) {
     .services, .about-us {
         flex-direction: column;
