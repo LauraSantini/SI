@@ -100,57 +100,59 @@ section {
 
 /* Estilo da Secção de Serviços */
 .services {
-    padding-top: 10%;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: flex; /* Use flexbox to align the items side by side */
+    justify-content: space-around; /* Space items evenly within the container */
+    gap: 20px; /* Adds some space between each service item */
+    padding: 40px; /* Adds padding around the container */
+    background-color: #f0f0f0; /* Light background color for the section */
+    flex-wrap: wrap; /* Allows the items to wrap on smaller screens */
 }
 
+/* Styling for each individual service item */
 .service-item {
-    width: 20%;
-    margin-bottom: 10px;
-    text-align: center;
-    border: 2px solid #FF6F00; /* Orange border color */
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease; /* Transformation effect */
-    position: relative; /* Needed for absolute positioning of the paragraph */
+    background-color: #fff; /* White background for the service item */
+    padding: 20px; /* Add padding inside the item */
+    border-radius: 10px; /* Rounded corners for the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 30%; /* Each item takes up 30% of the container's width */
+    text-align: center; /* Center the content inside the service item */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
 }
 
+/* Hover effect for the service-item */
 .service-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hover shadow effect */
+    transform: translateY(-5px); /* Slightly raise the item on hover */
 }
 
+/* Ensuring all images within service items are the same size */
 .service-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 150px;  /* Set all images to 150px width */
+    height: auto;  /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures images fit nicely inside the space */
+    margin-bottom: 15px; /* Adds space below the image */
 }
 
+/* Styling for the title */
 .service-item h3 {
-    color: #333; /* Title text color */
-    margin-top: 15px;
+    font-size: 1.5em; /* Adjust the font size of the title */
+    margin: 10px 0; /* Adds space above and below the title */
+    color: #333; /* Dark gray color for the text */
 }
 
+/* Styling for the paragraph text */
 .service-item p {
-    color: #555; /* Paragraph text color */
-    display: none; /* Hide paragraph by default */
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
-    position: absolute;
-    bottom: 20px; /* Position paragraph at the bottom */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Make paragraph width fit the container */
+    font-size: 1em; /* Set the font size for the description */
+    color: #666; /* Lighter gray color for the text */
+    line-height: 1.5; /* Adds space between lines of text */
 }
 
-.service-item:hover p {
-    display: block; /* Show paragraph on hover */
-    opacity: 1; /* Fade in the paragraph */
+/* Specifically targeting the Mercedes image */
+.service-item img[alt="Corporate Rentals"] {
+    max-width: 110px;   /* Set the width to match the others */
+    height: auto;   /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the image fits inside the space without distortion */
 }
+
 /* Estilo da Seção Sobre Nós */
 .about-us {
     display: flex;
