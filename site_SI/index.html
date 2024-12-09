@@ -8,10 +8,64 @@
 </head>
 <body>
 
-    <!-- Header with Navigation Menu -->
+    <style>
+        /* Hamburger-specific styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        /* Collapsible behavior for mobile */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none; /* Hidden by default */
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                z-index: 100;
+            }
+
+            nav ul.show {
+                display: flex; /* Show when triggered */
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
     <header>
         <nav>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="#">About Us</a></li>
@@ -21,6 +75,16 @@
             </ul>
         </nav>
     </header>
+
+    <script>
+        // Toggle menu for mobile
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
 
     <!-- Hero Section -->
     <div class="hero">
