@@ -30,22 +30,52 @@
     </div>
 
     <!-- Services Section -->
+    <section><h2>Our Services</h2></section>
     <section class="services">
-        <h2>Our Services</h2>
         <div class="service-item">
             <img src="service1.jpg" alt="Car Booking">
-            <h3>Car Booking</h3>
-            <p>Choose from a wide selection of cars for your next trip.</p>
+            <h3>BMW</h3>
+            <p>"Experience luxury and performance by booking a BMW car today, where cutting-edge technology meets elegant design."</p>
         </div>
         <div class="service-item">
             <img src="service2.jpg" alt="Luxury Cars">
-            <h3>Luxury Cars</h3>
-            <p>Experience the luxury and comfort with our premium fleet.</p>
+            <h3>AUDI</h3>
+            <p>"Elevate your driving experience by booking an Audi, where innovation, style, and performance come together seamlessly."</p>
         </div>
         <div class="service-item">
             <img src="service3.jpg" alt="Corporate Rentals">
-            <h3>Corporate Rentals</h3>
-            <p>Book vehicles for your business needs and meetings.</p>
+            <h3>MERCEDES</h3>
+            <p>"Indulge in unmatched luxury and sophistication by booking a Mercedes-Benz, the epitome of timeless elegance and cutting-edge engineering."</p>
+        </div>
+        <div class="service-item">
+            <img src="service4.jpg" alt="Car Booking">
+            <h3>TOYOTA</h3>
+            <p>"Book a Toyota today and enjoy reliability, innovation, and efficiency, perfect for every journey ahead."</p>
+        </div>
+        <div class="service-item">
+            <img src="service5.jpg" alt="Luxury Cars">
+            <h3>NISSAN</h3>
+            <p>"Book a Nissan today and experience a perfect blend of innovation, performance, and comfort for all your adventures."</p>
+        </div>
+        <div class="service-item">
+            <img src="service6.jpg" alt="Corporate Rentals">
+            <h3>MITSUBISHI</h3>
+            <p>"Book a Mitsubishi now and discover a driving experience built on reliability, performance, and adventurous spirit."</p>
+        </div>
+        <div class="service-item">
+            <img src="service7.jpg" alt="Luxury Cars">
+            <h3>FORD</h3>
+            <p>"Book a Ford today and experience the perfect combination of power, innovation, and versatility for every road ahead."</p>
+        </div>
+        <div class="service-item">
+            <img src="service8.jpg" alt="Corporate Rentals">
+            <h3>PEUGEOT</h3>
+            <p>"Book a Peugeot today and enjoy a driving experience defined by elegance, innovation, and dynamic performance."</p>
+        </div>
+        <div class="service-item">
+            <img src="service9.jpg" alt="Corporate Rentals">
+            <h3>FIAT</h3>
+            <p>"Book a Fiat today and embrace a blend of iconic style, practicality, and fun-to-drive performance."</p>
         </div>
     </section>
 
@@ -68,6 +98,101 @@
             <p>We prioritize customer satisfaction with excellent service and support.</p>
         </div>
     </section>
+    <h2>Admin Dashboard</h2>
+
+    <!-- Add Car Form -->
+    <div class="form-container">
+        <h3>Add Car</h3>
+        <input type="text" id="matricula" placeholder="Car Matricula" required>
+        <input type="text" id="disponibilidade" placeholder="Disponibilidade (e.g., 'available')" required>
+        <input type="number" id="custo" placeholder="Cost" required>
+        <input type="number" id="numero_lugares" placeholder="Number of Seats" required>
+        <button onclick="addCar()">Add Car</button>
+    </div>
+
+    <!-- Update Car Cost Form -->
+    <div class="form-container">
+        <h3>Update Car Cost</h3>
+        <input type="number" id="id_carro_cost" placeholder="Car ID" required>
+        <input type="number" id="new_custo" placeholder="New Cost" required>
+        <button onclick="updateCost()">Update Cost</button>
+    </div>
+
+    <!-- Remove Car Form -->
+    <div class="form-container">
+        <h3>Remove Car</h3>
+        <input type="number" id="id_carro_remove" placeholder="Car ID" required>
+        <button onclick="removeCar()">Remove Car</button>
+    </div>
+
+    <script>
+        // Add Car function
+        function addCar() {
+            const matricula = document.getElementById('matricula').value;
+            const disponibilidade = document.getElementById('disponibilidade').value;
+            const custo = document.getElementById('custo').value;
+            const numero_lugares = document.getElementById('numero_lugares').value;
+
+            fetch('http://localhost:3000/add-car', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    matricula,
+                    disponibilidade,
+                    custo,
+                    numero_lugares
+                })
+            }).then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            }).catch(error => {
+                alert('Error: ' + error.message);
+            });
+        }
+
+        // Update Car Cost function
+        function updateCost() {
+            const id_carro = document.getElementById('id_carro_cost').value;
+            const new_custo = document.getElementById('new_custo').value;
+
+            fetch('http://localhost:3000/update-cost', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    id_carro,
+                    new_custo
+                })
+            }).then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            }).catch(error => {
+                alert('Error: ' + error.message);
+            });
+        }
+
+        // Remove Car function
+        function removeCar() {
+            const id_carro = document.getElementById('id_carro_remove').value;
+
+            fetch('http://localhost:3000/remove-car', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id_carro })
+            }).then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            }).catch(error => {
+                alert('Error: ' + error.message);
+            });
+        }
+    </script>
+
 
     <!-- Footer -->
     <footer>
