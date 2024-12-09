@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .account-container {
+            display:flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .account-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .account-header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .account-header h1 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .account-header p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .account-section {
+            margin-bottom: 20px;
+        }
+
+        .account-section h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .account-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .account-section form label {
+            font-weight: bold;
+        }
+
+        .account-section form input, .account-section form button {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .account-section form input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        .account-section form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .account-section form button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Account Page</h1>
+    </header>
+
+    <!-- Account Section -->
+    <div class="account-container">
+        <!-- Profile Section -->
+        <div class="account-header">
+            <img src="profile-photo.jpg" alt="Profile Picture">
+            <h1>John Doe</h1>
+            <p>Member since: January 2024</p>
+        </div>
+
+        <!-- Personal Information Section -->
+        <div class="account-section">
+            <h2>Personal Information</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="John">
+
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" value="Doe">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="john.doe@example.com">
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" value="+1 234 567 8901">
+
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" value="Portugal">
+
+                <label for="adress">Adress</label>
+                <input type="text" id="street" name="street" value="Rua Dr. Andrade de Melo, lote 8">
+
+                <button type="submit">Update Information</button>
+            </form>
+        </div>
+
+        <!-- Password Management Section -->
+        <div class="account-section">
+            <h2>Change Password</h2>
+            <form>
+                <label for="current-password">Current Password</label>
+                <input type="password" id="current-password" name="current-password" placeholder="Enter current password">
+
+                <label for="new-password">New Password</label>
+                <input type="password" id="new-password" name="new-password" placeholder="Enter new password">
+
+                <label for="confirm-password">Confirm New Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password">
+
+                <button type="submit">Update Password</button>
+            </form>
+        </div>
+
+        <!-- Account Actions Section -->
+        <div class="account-section">
+            <h2>Account Actions</h2>
+            <button style="background-color: #d9534f; color: white;" onclick="confirm('Are you sure you want to delete your account?')">
+                Delete Account
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Account Management Co. | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
