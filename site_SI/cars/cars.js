@@ -1,8 +1,19 @@
 function toggleCollapsible(id) {
-    const content = document.getElementById(id);
-    if (content.style.display === "block") {
-        content.style.display = "none";
+    // Get all collapsible content elements
+    const allCollapsibles = document.querySelectorAll('.collapsible-content');
+    
+    // Loop through all collapsibles and hide them
+    allCollapsibles.forEach(content => {
+        if (content.id !== id) {
+            content.style.display = 'none';
+        }
+    });
+
+    // Toggle the visibility of the clicked collapsible section
+    const clickedContent = document.getElementById(id);
+    if (clickedContent.style.display === "block") {
+        clickedContent.style.display = "none"; // Hide if already open
     } else {
-        content.style.display = "block";
+        clickedContent.style.display = "block"; // Show the clicked section
     }
 }

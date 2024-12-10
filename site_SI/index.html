@@ -34,21 +34,71 @@
     <!-- Services Section -->
     <section><h2>Our Services</h2></section>
     <section class="services">
-        <div class="service-item">
-            <img src="images/BMW.png" alt="Car Booking">
+
+        <!-- Brand 1 -->
+
+        <div class="service-item" onclick="toggleCollapsible('brand1')">
+            <img src="images/BMW.png" alt="BMW">
             <h3>BMW</h3>
-            <p>"Experience luxury and performance by booking a BMW car today, where cutting-edge technology meets elegant design."</p>
+            <p>"Experience luxury and performance by booking a BMW car today."</p>
+            <!-- Collapsible Content for BMW -->
+            <div id="brand1" class="collapsible-content">
+                <p>Additional details about BMW. BMW offers a range of luxurious models, perfect for high-performance driving experiences. Discover a world of elegance and speed with BMW.</p>
+                <div class="model">
+                    <img src="images/bmw3series.jpg" alt="BMW 3 Series">
+                    <h3>3 Series</h3>
+                    <p>A sporty and elegant sedan with cutting-edge technology.</p>
+                    <!-- Direct Link to 3 Series Profile Page -->
+                    <a href="cars\profiles\car-profile-3series copy.html" class="model-button">Book Now</a>
+                </div>
+                <div class="model">
+                    <img src="images/bmwx5.jpg" alt="BMW X5">
+                    <h3>X5</h3>
+                    <p>A luxurious midsize SUV with powerful performance and space.</p>
+                    <!-- Direct Link to X5 Profile Page -->
+                    <a href="cars\profiles\car-profile-x5.html" class="model-button">Book Now</a>
+                </div>
+            </div>
         </div>
-        <div class="service-item">
-            <img src="images/AUDI.png" alt="Luxury Cars">
+
+
+        <!-- Brand 2 -->
+
+        <div class="service-item" onclick="toggleCollapsible('brand2')">
+            <img src="images/AUDI.png" alt="Audi">
             <h3>AUDI</h3>
-            <p>"Elevate your driving experience by booking an Audi, where innovation, style, and performance come together seamlessly."</p>
+            <p>"Elevate your driving experience with Audi."</p>
+            <!-- Collapsible Content for Audi -->
+                <div id="brand2" class="collapsible-content">
+                    <p>Additional details about Audi. Audi represents innovation, luxury, and cutting-edge technology, offering an unmatched driving experience for every journey.</p>
+                    <div class="model">
+                        <img src="images/audia4.jpg" alt="Audi A4">
+                        <h3>A4</h3>
+                        <p>A premium compact sedan with advanced features and a smooth ride.</p>
+                        <!-- Direct Link to A4 Profile Page -->
+                        <a href="profiles/car-profile-a4.html" class="model-button">Book Now</a>
+                    </div>
+                    <div class="model">
+                        <img src="images/audiq7.jpg" alt="Audi Q7">
+                        <h3>Q7</h3>
+                        <p>A sophisticated SUV with impressive space and technology.</p>
+                        <!-- Direct Link to Q7 Profile Page -->
+                        <a href="profiles/car-profile-q7.html" class="model-button">Book Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="service-item">
-            <img src="images/MERCEDES.png" alt="Corporate Rentals">
+    
+        <div class="service-item" onclick="toggleCollapsible('mercedes-info')">
+            <img src="images/MERCEDES.png" alt="Mercedes">
             <h3>MERCEDES</h3>
-            <p>"Indulge in unmatched luxury and sophistication by booking a Mercedes-Benz, the epitome of timeless elegance and cutting-edge engineering."</p>
+            <p>"Indulge in unmatched luxury and sophistication by booking a Mercedes-Benz."</p>
+            <!-- Collapsible Content for Mercedes -->
+            <div id="mercedes-info" class="collapsible-content">
+                <p>Additional details about Mercedes. Mercedes-Benz is synonymous with elegance and top-tier engineering, offering vehicles that provide both luxury and performance.</p>
+            </div>
         </div>
+
         <div class="service-item">
             <img src="images/TOYOTA.png" alt="Car Booking">
             <h3>TOYOTA</h3>
@@ -79,6 +129,7 @@
             <h3>FIAT</h3>
             <p>"Book a Fiat today and embrace a blend of iconic style, practicality, and fun-to-drive performance."</p>
         </div>
+    </section>
     </section>
 
     <!-- About Us Section -->
@@ -169,5 +220,8 @@
     <footer>
         <p>&copy; 2024 Automobile Booking Co. | All Rights Reserved</p>
     </footer>
+
+    <script src="cars/cars.js"></script>
+
 </body>
 </html> 

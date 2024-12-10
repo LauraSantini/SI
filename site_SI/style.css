@@ -267,3 +267,65 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
 }
+
+.collapsible-content {
+    display:none;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.model {
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.model img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.model h3 {
+    margin: 5px 0;
+}
+
+.model-button {
+    position:relative;
+    display:flex;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.model-button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Add a visual cue to indicate that the section can be expanded */
+.service-item {
+    cursor: pointer;
+}
+
+.service-item img {
+    max-width: 100px;  /* Adjust size if necessary */
+    height: auto;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Optional: Add styles for the hover effect */
+.service-item:hover {
+    background-color: #e6e6e6;
+}
