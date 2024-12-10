@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews Page with Star Ratings</title>
+
+<!-- Header with Navigation Menu -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/cars/cars.html">Cars</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="/user.html">User</a></li>
+            <li><a href="/account.html">Account</a></li>
+            <li><a href="/help.html">Help</a></li>
+        </ul>
+    </nav>
+</header>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,12 +28,46 @@
             background-color: #f4f4f9;
         }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-        }
+/* Estilos do Cabeçalho */
+header {
+    background-color: #333; /* Cor de fundo escura */
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para o cabeçalho */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+header nav ul li a:hover {
+    background-color: #FF6F00; /* Cor de fundo laranja no hover */
+    border-radius: 4px;
+}
+
+.title {
+
+    text-align: center;
+    margin-bottom: 20px;
+}
 
         .reviews-container {
             max-width: 1000px;
@@ -146,10 +196,9 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
+    <div class="title">
         <h1>Reviews</h1>
-    </header>
+</div>
 
     <!-- Reviews Section -->
     <div class="reviews-container">

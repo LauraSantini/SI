@@ -7,25 +7,46 @@
     <link rel="stylesheet" href="cars.css">
 </head>
 
+<body>
+
+<!-- Header with Navigation Menu -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/cars/cars.html">Cars</a></li>
+            <li><a href="/reviews.html">Reviews</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="/user.html">User</a></li>
+            <li><a href="/account.html">Account</a></li>
+            <li><a href="/help.html">Help</a></li>
+        </ul>
+    </nav>
+</header>
+
 <h1>Automobile Booking</h1>
 <h2>Choose your favorite car:</h2>
 
 <div class="car-brands">
 
-    <!-- Brand 1 -->
-    <button class="brand-button" onclick="toggleCollapsible('brand1')">Toyota</button>
-    <div id="brand1" class="collapsible-content">
-        <div class="model">
-            <img src="images/corolla.jpg" alt="Toyota Corolla">
-            <h3>Corolla</h3>
-            <p>A reliable sedan with great fuel efficiency.</p>
-        </div>
-        <div class="model">
-            <img src="images/camry.jpg" alt="Toyota Camry">
-            <h3>Camry</h3>
-            <p>A luxurious midsize sedan with advanced features.</p>
-        </div>
+<!-- Brand 1 -->
+<button class="brand-button" onclick="toggleCollapsible('brand1')">Toyota</button>
+<div id="brand1" class="collapsible-content">
+    <div class="model">
+        <img src="images/corolla.jpg" alt="Toyota Corolla">
+        <h3>Corolla</h3>
+        <p>A reliable sedan with great fuel efficiency.</p>
+        <!-- Direct Link to Corolla Profile Page -->
+        <a href="profiles/car-profile-corolla.html" class="model-button">Book Now</a>
     </div>
+    <div class="model">
+        <img src="images/camry.jpg" alt="Toyota Camry">
+        <h3>Camry</h3>
+        <p>A luxurious midsize sedan with advanced features.</p>
+        <!-- Direct Link to Camry Profile Page -->
+        <a href="car-profile-camry.html" class="model-button">Book Now</a>
+    </div>
+</div>
 
     <!-- Brand 2 -->
     <button class="brand-button" onclick="toggleCollapsible('brand2')">Ford</button>
@@ -34,11 +55,15 @@
             <img src="images/mustang.jpg" alt="Ford Mustang">
             <h3>Mustang</h3>
             <p>An iconic sports car with powerful performance.</p>
+            <!-- Direct Link to Mustang Profile Page -->
+            <a href="car-profile-mustang.html" class="model-button">Book Now</a>
         </div>
         <div class="model">
             <img src="images/f150.jpg" alt="Ford F-150">
             <h3>F-150</h3>
             <p>A robust and versatile pickup truck.</p>
+            <!-- Direct Link to F-150 Profile Page -->
+            <a href="car-profile-f150.html" class="model-button">Book Now</a>
         </div>
     </div>
 
@@ -49,11 +74,15 @@
             <img src="images/model3.jpg" alt="Tesla Model 3">
             <h3>Model 3</h3>
             <p>An affordable electric sedan with autopilot features.</p>
+            <!-- Direct Link to Model 3 Profile Page -->
+            <a href="car-profile-model3.html" class="model-button">Book Now</a>
         </div>
         <div class="model">
             <img src="images/modelx.jpg" alt="Tesla Model X">
             <h3>Model X</h3>
             <p>A futuristic SUV with falcon wing doors.</p>
+            <!-- Direct Link to Model X Profile Page -->
+            <a href="car-profile-modelx.html" class="model-button">Book Now</a>
         </div>
     </div>
 

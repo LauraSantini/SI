@@ -2,6 +2,44 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
+
+/* Estilos do Cabeçalho */
+header {
+    background-color: #333; /* Cor de fundo escura */
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para o cabeçalho */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+header nav ul li a:hover {
+    background-color: #FF6F00; /* Cor de fundo laranja no hover */
+    border-radius: 4px;
+}
+
+
+
 h1, h2 {
     text-align: center;
 }
@@ -38,4 +76,19 @@ h1, h2 {
 }
 .model h3 {
     margin: 5px 0;
+}
+
+.model-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.model-button:hover {
+    background-color: #0056b3;
 }
