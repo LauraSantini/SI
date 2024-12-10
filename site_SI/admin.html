@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page</title>
+    <link rel="stylesheet" href="style.css">
+
+<!-- Header with Navigation Menu -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/cars/cars.html">Cars</a></li>
+            <li><a href="/reviews/reviews.html">Reviews</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li><a href="/account.html">Account</a></li>
+            <li><a href="user.html">User</a></li>
+            <li><a href="/help.html">Help</a></li>
+        </ul>
+    </nav>
+</header>
+  
+<h2>Admin Dashboard</h2>
+  <!-- Add Car Form -->
+   <div class="form-container">
+    <h3>Add Car</h3>
+    <input type="text" id="matricula" placeholder="Car Matricula" required>
+    <input type="text" id="disponibilidade" placeholder="Disponibilidade (e.g., 'available')" required>
+    <input type="number" id="custo" placeholder="Cost" required>
+    <input type="number" id="numero_lugares" placeholder="Number of Seats" required>
+    <button onclick="addCar()">Add Car</button>
+</div>
+
+<!-- Update Car Cost Form -->
+<div class="form-container">
+    <h3>Update Car Cost</h3>
+    <input type="number" id="id_carro_cost" placeholder="Car ID" required>
+    <input type="number" id="new_custo" placeholder="New Cost" required>
+    <button onclick="updateCost()">Update Cost</button>
+</div>
+
+<!-- Remove Car Form -->
+<div class="form-container">
+    <h3>Remove Car</h3>
+    <input type="number" id="id_carro_remove" placeholder="Car ID" required>
+    <button onclick="removeCar()">Remove Car</button>
+</div>
+
+<script>
+     function addCar() {
+        const matricula = document.getElementById('matricula').value;
+        const disponibilidade = document.getElementById('disponibilidade').value;
+        const custo = document.getElementById('custo').value;
+        const numero_lugares = document.getElementById('numero_lugares').value;
+
+        if (!matricula || !disponibilidade || !custo || !numero_lugares) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        fetch('http://localhost:3000/add-car', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                matricula,
+                disponibilidade,
+                custo,
+                numero_lugares
+            })
+        }).then(response => response.json())
+        .then(data => {
+            const feedbackDiv = document.getElementById('feedback');
+            feedbackDiv.style.display = 'block';
+            feedbackDiv.style.color = 'green';
+            feedbackDiv.textContent = data.message;  // Show success message
+        }).catch(error => {
+            const feedbackDiv = document.getElementById('feedback');
+            feedbackDiv.style.display = 'block';
+            feedbackDiv.style.color = 'red';
+            feedbackDiv.textContent = 'Error: ' + error.message;  // Show error message
+        });
+    }
+</script>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Help Center | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

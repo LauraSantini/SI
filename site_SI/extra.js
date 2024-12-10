@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const sql = require('mssql');
 
 const app = express();
-const port = 3000;
+const port = 5500;
 
 app.use(bodyParser.json());  // Parse incoming JSON requests
 
@@ -108,33 +108,66 @@ app.post('/register', async (req, res) => {
 });
 
 // API route for user login
-app.post('/login', async (req, res) => {
-    const { username, password } = req.body;
-    try {
-        const result = await req.app.locals.pool.request()
-            .input('username', sql.NVarChar, username)
-            .query(`SELECT * FROM clientes WHERE Username = @username`);
+const express = require('express');
+const mysql = require('mysql');
+const cors = require('cors');
+const bcrypt = require('bcrypt');
 
-        if (result.recordset.length === 0) {
-            return res.status(400).json({ error: 'User not found' });
-        }
+const app = express();
+const port = 5500;
 
-        const user = result.recordset[0];
-        const match = await bcrypt.compare(password, user.Password);
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-        if (match) {
-            res.status(200).json({ message: 'Login successful', userID: user.UserID });
-        } else {
-            res.status(400).json({ error: 'Invalid credentials' });
-        }
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'Internal server error' });
+// Database connection
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'root', // Replace with your MySQL username
+    password: '', // Replace with your MySQL password
+    database: 'your-database-name', // Replace with your database name
+});
+
+db.connect(err => {
+    if (err) {
+        console.error('Failed to connect to database:', err);
+        process.exit(1);
     }
+    console.log('Connected to database.');
 });
 
-// Start the server
+// Login endpoint
+app.post('/login', (req, res) => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        return res.status(400).json({ message: 'Email and password are required' });
+    }
+
+    const query = 'SELECT * FROM users WHERE email = ?';
+    db.query(query, [email], async (err, results) => {
+        if (err) {
+            console.error('Database query error:', err);
+            return res.status(500).json({ message: 'Internal server error' });
+        }
+
+        if (results.length === 0) {
+            return res.status(401).json({ message: 'Invalid email or password' });
+        }
+
+        const user = results[0];
+
+        // Verify password
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Invalid email or password' });
+        }
+
+        res.json({ message: 'Login successful', user: { id: user.id, email: user.email } });
+    });
+});
+
+// Start server
 app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+    console.log(Server running on http://localhost:${port});
 });
-

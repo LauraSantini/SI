@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews Page with Star Ratings</title>
+    <title>Reviews Page</title>
 
-<!-- Header with Navigation Menu -->
-<header>
-    <nav>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/cars/cars.html">Cars</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="/user.html">User</a></li>
-            <li><a href="/account.html">Account</a></li>
-            <li><a href="/help.html">Help</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Header with Navigation Menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/cars/cars.html">Cars</a></li>
+                <li><a href="/reviews/reviews.html">Reviews</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/account.html">Account</a></li>
+                <li><a href="user.html">User</a></li>
+                <li><a href="/help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <style>
         body {
@@ -28,7 +28,7 @@
             background-color: #f4f4f9;
         }
 
-/* Estilos do Cabeçalho */
+        /* Estilos do Cabeçalho */
 header {
     background-color: #333; /* Cor de fundo escura */
     color: white;
@@ -61,12 +61,6 @@ header nav ul li a {
 header nav ul li a:hover {
     background-color: #FF6F00; /* Cor de fundo laranja no hover */
     border-radius: 4px;
-}
-
-.title {
-
-    text-align: center;
-    margin-bottom: 20px;
 }
 
         .reviews-container {
@@ -156,7 +150,7 @@ header nav ul li a:hover {
         }
 
         .form-section form button {
-            background-color: #4CAF50;
+            background-color: #6954bf;
             color: white;
             border: none;
             cursor: pointer;
@@ -186,21 +180,10 @@ header nav ul li a:hover {
         .stars input:hover ~ label {
             color: gold;
         }
-
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #777;
-        }
     </style>
 </head>
 <body>
 
-    <div class="title">
-        <h1>Reviews</h1>
-</div>
-
-    <!-- Reviews Section -->
     <div class="reviews-container">
         <!-- Reviews Header -->
         <div class="reviews-header">
@@ -208,40 +191,16 @@ header nav ul li a:hover {
             <p>Read feedback from our customers or leave your own review below.</p>
         </div>
 
-        <!-- List of Reviews -->
-        <div class="reviews-list">
-            <div class="review-item">
-                <h3>Jane Doe</h3>
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p>“Great experience! The service was exceptional and the staff were super helpful.”</p>
-                <span>Posted on: 2024-12-01</span>
-            </div>
-
-            <div class="review-item">
-                <h3>John Smith</h3>
-                <div class="review-stars">⭐⭐⭐⭐</div>
-                <p>“The vehicle selection was impressive, and the booking process was seamless. Highly recommend!”</p>
-                <span>Posted on: 2024-11-28</span>
-            </div>
-
-            <div class="review-item">
-                <h3>Emily Johnson</h3>
-                <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                <p>“Affordable prices and excellent customer support. Will definitely use this service again!”</p>
-                <span>Posted on: 2024-11-25</span>
-            </div>
-        </div>
-
         <!-- Review Submission Form -->
         <div class="form-section">
             <h2>Leave Your Review</h2>
-            <form action="#" method="post">
+            <form action="reviews.php" method="post">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Full Name" required>
 
                 <label for="rating">Rating</label>
                 <div class="stars">
-                    <input type="radio" id="star5" name="rating" value="5">
+                    <input type="radio" id="star5" name="rating" value="5" required>
                     <label for="star5">⭐</label>
                     <input type="radio" id="star4" name="rating" value="4">
                     <label for="star4">⭐</label>
@@ -263,11 +222,6 @@ header nav ul li a:hover {
             </form>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Reviews Co. | All Rights Reserved</p>
-    </footer>
 
 </body>
 </html>
