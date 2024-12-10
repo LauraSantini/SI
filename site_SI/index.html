@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automobile Booking</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Header with Navigation Menu -->
@@ -22,18 +24,20 @@
             </ul>
         </nav>
     </header>
-    
+
 
     <!-- Hero Section -->
     <div class="hero">
-        <img src="images/vehicles.hero.jpg" alt="vehicles_hero" width="100%"> 
+        <img src="images/vehicles.hero.jpg" alt="vehicles_hero" width="100%">
         <h1>Fast & Furious</h1>
         <h2>Cars Inc.</h2>
         <p>Explore a wide variety of vehicles and book your next journey today!</p>
     </div>
 
     <!-- Services Section -->
-    <section><h2>Our Services</h2></section>
+    <section>
+        <h2>Our Services</h2>
+    </section>
     <section class="services">
 
         <!-- Brand 1 -->
@@ -44,16 +48,17 @@
             <p>"Experience luxury and performance by booking a BMW car today."</p>
             <!-- Collapsible Content for BMW -->
             <div id="brand1" class="collapsible-content">
-                <p>Additional details about BMW. BMW offers a range of luxurious models, perfect for high-performance driving experiences. Discover a world of elegance and speed with BMW.</p>
+                <p>Additional details about BMW. BMW offers a range of luxurious models, perfect for high-performance
+                    driving experiences. Discover a world of elegance and speed with BMW.</p>
                 <div class="model">
-                    <img src="images/bmw3series.jpg" alt="BMW 3 Series">
+                    <img src="images/series3.jpg" alt="BMW 3 Series">
                     <h3>3 Series</h3>
                     <p>A sporty and elegant sedan with cutting-edge technology.</p>
                     <!-- Direct Link to 3 Series Profile Page -->
                     <a href="cars\profiles\car-profile-3series copy.html" class="model-button">Book Now</a>
                 </div>
                 <div class="model">
-                    <img src="images/bmwx5.jpg" alt="BMW X5">
+                    <img src="images/x5.jpg" alt="BMW X5">
                     <h3>X5</h3>
                     <p>A luxurious midsize SUV with powerful performance and space.</p>
                     <!-- Direct Link to X5 Profile Page -->
@@ -70,66 +75,185 @@
             <h3>AUDI</h3>
             <p>"Elevate your driving experience with Audi."</p>
             <!-- Collapsible Content for Audi -->
-                <div id="brand2" class="collapsible-content">
-                    <p>Additional details about Audi. Audi represents innovation, luxury, and cutting-edge technology, offering an unmatched driving experience for every journey.</p>
-                    <div class="model">
-                        <img src="images/audia4.jpg" alt="Audi A4">
-                        <h3>A4</h3>
-                        <p>A premium compact sedan with advanced features and a smooth ride.</p>
-                        <!-- Direct Link to A4 Profile Page -->
-                        <a href="profiles/car-profile-a4.html" class="model-button">Book Now</a>
-                    </div>
-                    <div class="model">
-                        <img src="images/audiq7.jpg" alt="Audi Q7">
-                        <h3>Q7</h3>
-                        <p>A sophisticated SUV with impressive space and technology.</p>
-                        <!-- Direct Link to Q7 Profile Page -->
-                        <a href="profiles/car-profile-q7.html" class="model-button">Book Now</a>
-                    </div>
+            <div id="brand2" class="collapsible-content">
+                <p>Additional details about Audi. Audi represents innovation, luxury, and cutting-edge technology,
+                    offering an unmatched driving experience for every journey.</p>
+                <div class="model">
+                    <img src="images/a4.png" alt="Audi A4">
+                    <h3>A4</h3>
+                    <p>A premium compact sedan with advanced features and a smooth ride.</p>
+                    <!-- Direct Link to A4 Profile Page -->
+                    <a href="cars/profiles/car-profile-a4.html" class="model-button">Book Now</a>
+                </div>
+                <div class="model">
+                    <img src="images/q7.png" alt="Audi Q7">
+                    <h3>Q7</h3>
+                    <p>A sophisticated SUV with impressive space and technology.</p>
+                    <!-- Direct Link to Q7 Profile Page -->
+                    <a href="cars/profiles/car-profile-q7.html" class="model-button">Book Now</a>
                 </div>
             </div>
         </div>
-    
-        <div class="service-item" onclick="toggleCollapsible('mercedes-info')">
+        </div>
+
+        <!-- Brand 3 -->
+
+        <div class="service-item" onclick="toggleCollapsible('brand3')">
             <img src="images/MERCEDES.png" alt="Mercedes">
             <h3>MERCEDES</h3>
             <p>"Indulge in unmatched luxury and sophistication by booking a Mercedes-Benz."</p>
             <!-- Collapsible Content for Mercedes -->
-            <div id="mercedes-info" class="collapsible-content">
-                <p>Additional details about Mercedes. Mercedes-Benz is synonymous with elegance and top-tier engineering, offering vehicles that provide both luxury and performance.</p>
+            <div id="brand3" class="collapsible-content">
+                <div class="model">
+                    <img src="images/cclass.jpg" alt="Mercedes C-Class">
+                    <h3>C-Class</h3>
+                    <p>A stylish luxury sedan offering comfort and performance.</p>
+                    <!-- Direct Link to C-Class Profile Page -->
+                    <a href="cars/profiles/car-profile-cclass.html" class="model-button">Book Now</a>
+                </div>
+                <div class="model">
+                    <img src="images/gle.jpeg" alt="Mercedes GLE">
+                    <h3>GLE</h3>
+                    <p>A premium SUV with advanced technology and a spacious interior.</p>
+                    <!-- Direct Link to GLE Profile Page -->
+                    <a href="cars/profiles/car-profile-gle.html" class="model-button">Book Now</a>
+                </div>
             </div>
         </div>
+        </div>
 
-        <div class="service-item">
-            <img src="images/TOYOTA.png" alt="Car Booking">
-            <h3>TOYOTA</h3>
-            <p>"Book a Toyota today and enjoy reliability, innovation, and efficiency, perfect for every journey ahead."</p>
+        <!-- Brand 4 -->
+
+<div class="service-item" onclick="toggleCollapsible('brand4')">
+    <img src="images/TOYOTA.png" alt="Car Booking">
+    <h3>TOYOTA</h3>
+    <p>"Book a Toyota today and enjoy reliability, innovation, and efficiency, perfect for every journey ahead."</p>
+    <!-- Collapsible Content for Toyota -->
+    <div id="brand4" class="collapsible-content" style="display: none;">
+        <div class="model">
+            <img src="images/toyotacorolla.jpg" alt="Toyota Corolla">
+            <h3>Corolla</h3>
+            <p>A reliable compact car with great fuel efficiency and comfort.</p>
+            <a href="profiles/car-profile-corolla.html" class="model-button">Book Now</a>
         </div>
-        <div class="service-item">
-            <img src="images/NISSAN.png" alt="Luxury Cars">
-            <h3>NISSAN</h3>
-            <p>"Book a Nissan today and experience a perfect blend of innovation, performance, and comfort for all your adventures."</p>
+        <div class="model">
+            <img src="images/toyotahighlander.jpg" alt="Toyota Highlander">
+            <h3>Highlander</h3>
+            <p>An adventurous SUV with ample space and excellent safety features.</p>
+            <a href="profiles/car-profile-highlander.html" class="model-button">Book Now</a>
         </div>
-        <div class="service-item">
-            <img src="images/MITSUBISHI.png" alt="Corporate Rentals">
-            <h3>MITSUBISHI</h3>
-            <p>"Book a Mitsubishi now and discover a driving experience built on reliability, performance, and adventurous spirit."</p>
+    </div>
+</div>
+
+<!-- Brand 5 -->
+<div class="service-item" onclick="toggleCollapsible('brand5')">
+    <img src="images/NISSAN.png" alt="Luxury Cars">
+    <h3>NISSAN</h3>
+    <p>"Book a Nissan today and experience a perfect blend of innovation, performance, and comfort for all your adventures."</p>
+    <!-- Collapsible Content for Nissan -->
+    <div id="brand5" class="collapsible-content" style="display: none;">
+        <div class="model">
+            <img src="images/nissanaltima.jpg" alt="Nissan Altima">
+            <h3>Altima</h3>
+            <p>A comfortable sedan with advanced features and powerful performance.</p>
+            <a href="profiles/car-profile-altima.html" class="model-button">Book Now</a>
         </div>
-        <div class="service-item">
-            <img src="images/FORD.png" alt="Luxury Cars">
-            <h3>FORD</h3>
-            <p>"Book a Ford today and experience the perfect combination of power, innovation, and versatility for every road ahead."</p>
+        <div class="model">
+            <img src="images/nissanpathfinder.jpg" alt="Nissan Pathfinder">
+            <h3>Pathfinder</h3>
+            <p>A family-friendly SUV with three rows of seating and strong towing capability.</p>
+            <a href="profiles/car-profile-pathfinder.html" class="model-button">Book Now</a>
         </div>
-        <div class="service-item">
-            <img src="images/PEUGEOT.png" alt="Corporate Rentals">
-            <h3>PEUGEOT</h3>
-            <p>"Book a Peugeot today and enjoy a driving experience defined by elegance, innovation, and dynamic performance."</p>
+    </div>
+</div>
+
+<!-- Brand 6 -->
+<div class="service-item" onclick="toggleCollapsible('brand6')">
+    <img src="images/MITSUBISHI.png" alt="Corporate Rentals">
+    <h3>MITSUBISHI</h3>
+    <p>"Book a Mitsubishi now and discover a driving experience built on reliability, performance, and adventurous spirit."</p>
+    <!-- Collapsible Content for Mitsubishi -->
+    <div id="brand6" class="collapsible-content" style="display: none;">
+        <div class="model">
+            <img src="images/mitsubishioutlander.jpg" alt="Mitsubishi Outlander">
+            <h3>Outlander</h3>
+            <p>A versatile SUV with seating for seven and excellent fuel economy.</p>
+            <a href="profiles/car-profile-outlander.html" class="model-button">Book Now</a>
         </div>
-        <div class="service-item">
-            <img src="images/FIAT.png" alt="Corporate Rentals">
-            <h3>FIAT</h3>
-            <p>"Book a Fiat today and embrace a blend of iconic style, practicality, and fun-to-drive performance."</p>
+        <div class="model">
+            <img src="images/mitsubishilancer.jpg" alt="Mitsubishi Lancer">
+            <h3>Lancer</h3>
+            <p>A compact sedan known for its agility and performance.</p>
+            <a href="profiles/car-profile-lancer.html" class="model-button">Book Now</a>
         </div>
+    </div>
+</div>
+
+<!-- Brand 7 -->
+<div class="service-item" onclick="toggleCollapsible('brand7')">
+    <img src="images/FORD.png" alt="Luxury Cars">
+    <h3>FORD</h3>
+    <p>"Book a Ford today and experience the perfect combination of power, innovation, and versatility for every road ahead."</p>
+    <!-- Collapsible Content for Ford -->
+    <div id="brand7" class="collapsible-content" style="display: none;">
+        <div class="model">
+            <img src="images/fordmustang.jpg" alt="Ford Mustang">
+            <h3>Mustang</h3>
+            <p>Feel the power of the iconic Mustang with its thrilling performance.</p>
+            <a href="profiles/car-profile-mustang.html" class="model-button">Book Now</a>
+        </div>
+        <div class="model">
+            <img src="images/fordexplorer.jpg" alt="Ford Explorer">
+            <h3>Explorer</h3>
+            <p>A rugged SUV with advanced technology and plenty of space for adventure.</p>
+            <a href="profiles/car-profile-explorer.html" class="model-button">Book Now</a>
+        </div>
+    </div>
+</div>
+
+<!-- Brand 8 -->
+<div class="service-item" onclick="toggleCollapsible('brand8')">
+    <img src="images/PEUGEOT.png" alt="Corporate Rentals">
+    <h3>PEUGEOT</h3>
+    <p>"Book a Peugeot today and enjoy a driving experience defined by elegance, innovation, and dynamic performance."</p>
+    <!-- Collapsible Content for Peugeot -->
+    <div id="brand8" class="collapsible-content" style="display: none;">
+        <div class="model">
+            <img src="images/peugeot308.jpg" alt="Peugeot 308">
+            <h3>308</h3>
+            <p>A compact car that combines performance and elegance.</p>
+            <a href="profiles/car-profile-308.html" class="model-button">Book Now</a>
+        </div>
+        <div class="model">
+            <img src="images/peugeot3008.jpg" alt="Peugeot 3008">
+            <h3>3008</h3>
+            <p>A stylish SUV with cutting-edge technology and refined design.</p>
+            <a href="profiles/car-profile-3008.html" class="model-button">Book Now</a>
+        </div>
+    </div>
+</div>
+
+<!-- Brand 9 -->
+<div class="service-item" onclick="toggleCollapsible('brand9')">
+    <img src="images/FIAT.png" alt="Corporate Rentals">
+    <h3>FIAT</h3>
+    <p>"Book a Fiat today and embrace a blend of iconic style, practicality, and fun-to-drive performance."</p>
+    <!-- Collapsible Content for Fiat -->
+    <div id="brand9" class="collapsible-content" style="display: none;">
+        <div class="model">
+            <img src="images/fiat500.jpg" alt="Fiat 500">
+            <h3>500</h3>
+            <p>An iconic city car that blends style with practicality.</p>
+            <a href="profiles/car-profile-500.html" class="model-button">Book Now</a>
+        </div>
+        <div class="model">
+            <img src="images/fiatpanda.jpg" alt="Fiat Panda">
+            <h3>Panda</h3>
+            <p>A compact and versatile car, perfect for city driving.</p>
+            <a href="profiles/car-profile-panda.html" class="model-button">Book Now</a>
+        </div>
+    </div>
+</div>
     </section>
     </section>
 
@@ -152,70 +276,6 @@
             <p>We prioritize customer satisfaction with excellent service and support.</p>
         </div>
     </section>
-    <h2>Admin Dashboard</h2>
-
-    <!-- Add Car Form -->
-    <div class="form-container">
-        <h3>Add Car</h3>
-        <input type="text" id="matricula" placeholder="Car Matricula" required>
-        <input type="text" id="disponibilidade" placeholder="Disponibilidade (e.g., 'available')" required>
-        <input type="number" id="custo" placeholder="Cost" required>
-        <input type="number" id="numero_lugares" placeholder="Number of Seats" required>
-        <button onclick="addCar()">Add Car</button>
-    </div>
-
-    <!-- Update Car Cost Form -->
-    <div class="form-container">
-        <h3>Update Car Cost</h3>
-        <input type="number" id="id_carro_cost" placeholder="Car ID" required>
-        <input type="number" id="new_custo" placeholder="New Cost" required>
-        <button onclick="updateCost()">Update Cost</button>
-    </div>
-
-    <!-- Remove Car Form -->
-    <div class="form-container">
-        <h3>Remove Car</h3>
-        <input type="number" id="id_carro_remove" placeholder="Car ID" required>
-        <button onclick="removeCar()">Remove Car</button>
-    </div>
-
-    <script>
-         function addCar() {
-            const matricula = document.getElementById('matricula').value;
-            const disponibilidade = document.getElementById('disponibilidade').value;
-            const custo = document.getElementById('custo').value;
-            const numero_lugares = document.getElementById('numero_lugares').value;
-
-            if (!matricula || !disponibilidade || !custo || !numero_lugares) {
-                alert("Please fill in all fields.");
-                return;
-            }
-
-            fetch('http://localhost:3000/add-car', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    matricula,
-                    disponibilidade,
-                    custo,
-                    numero_lugares
-                })
-            }).then(response => response.json())
-            .then(data => {
-                const feedbackDiv = document.getElementById('feedback');
-                feedbackDiv.style.display = 'block';
-                feedbackDiv.style.color = 'green';
-                feedbackDiv.textContent = data.message;  // Show success message
-            }).catch(error => {
-                const feedbackDiv = document.getElementById('feedback');
-                feedbackDiv.style.display = 'block';
-                feedbackDiv.style.color = 'red';
-                feedbackDiv.textContent = 'Error: ' + error.message;  // Show error message
-            });
-        }
-    </script>
 
     <!-- Footer -->
     <footer>
@@ -225,4 +285,5 @@
     <script src="cars/cars.js"></script>
 
 </body>
-</html> 
+
+</html>

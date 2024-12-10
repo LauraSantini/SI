@@ -4,24 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-
-
-    <!-- Header with Navigation Menu -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/cars/cars.html">Cars</a></li>
-                <li><a href="reviews/reviews.html">Reviews</a></li>
-                <li><a href="/login.html">Login</a></li>
-                <li><a href="/account.html">Account</a></li>
-                <li><a href="user.html">User</a></li>
-                <li><a href="/help.html">Help</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -81,7 +63,6 @@
     </style>
 </head>
 <body>
-
 <div class="login-container">
     <h1>Login</h1>
     <form id="login-form">
@@ -93,41 +74,30 @@
 </div>
 
 <script>
-    document.getElementById('login-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent form submission
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+        e.preventDefault();
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        if (!email || !password) {
-            document.getElementById('error-message').textContent = 'Please fill in all fields.';
-            return;
-        }
-
         fetch('http://localhost:3000/login', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, password })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password }),
         })
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error('Invalid credentials');
-            }
-        })
-        .then(data => {
-            alert('Login successful!');
-            // Redirect to user profile or dashboard
-            window.location.href = '/user.html';
-        })
-        .catch(error => {
-            document.getElementById('error-message').textContent = error.message;
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Login successful') {
+                    alert('Login successful!');
+                    window.location.href = '/user.html';
+                } else {
+                    document.getElementById('error-message').textContent = data.message;
+                }
+            })
+            .catch(err => {
+                document.getElementById('error-message').textContent = 'Server error: ' + err.message;
+            });
     });
 </script>
-
 </body>
 </html>

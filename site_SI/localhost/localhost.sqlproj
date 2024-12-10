@@ -72,7 +72,9 @@
     </ArtifactReference>
   </ItemGroup>
   <ItemGroup>
+    <Build Include="Script1.sql" />
     <Build Include="Table.sql" />
+    <Build Include="Table2.sql" />
   </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />

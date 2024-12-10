@@ -6,9 +6,9 @@ USE reviews_db;
 
 -- Create the reviews table
 CREATE TABLE reviews (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,  -- Auto-increment in PostgreSQL
     name VARCHAR(255) NOT NULL,
-    rating INT NOT NULL,
+    rating INT NOT NULL CHECK (rating BETWEEN 1 AND 5),  -- Ensure rating is between 1 and 5
     review TEXT NOT NULL,
-    date DATE NOT NULL
+    date TIMESTAMP NOT NULL  -- Storing both date and time
 );
