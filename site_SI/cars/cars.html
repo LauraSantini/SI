@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Booking</title>
+    <link rel="stylesheet" href="cars.css">
+</head>
+
+<h1>Automobile Booking</h1>
+<h2>Choose your favorite car:</h2>
+
+<div class="car-brands">
+
+    <!-- Brand 1 -->
+    <button class="brand-button" onclick="toggleCollapsible('brand1')">Toyota</button>
+    <div id="brand1" class="collapsible-content">
+        <div class="model">
+            <img src="images/corolla.jpg" alt="Toyota Corolla">
+            <h3>Corolla</h3>
+            <p>A reliable sedan with great fuel efficiency.</p>
+        </div>
+        <div class="model">
+            <img src="images/camry.jpg" alt="Toyota Camry">
+            <h3>Camry</h3>
+            <p>A luxurious midsize sedan with advanced features.</p>
+        </div>
+    </div>
+
+    <!-- Brand 2 -->
+    <button class="brand-button" onclick="toggleCollapsible('brand2')">Ford</button>
+    <div id="brand2" class="collapsible-content">
+        <div class="model">
+            <img src="images/mustang.jpg" alt="Ford Mustang">
+            <h3>Mustang</h3>
+            <p>An iconic sports car with powerful performance.</p>
+        </div>
+        <div class="model">
+            <img src="images/f150.jpg" alt="Ford F-150">
+            <h3>F-150</h3>
+            <p>A robust and versatile pickup truck.</p>
+        </div>
+    </div>
+
+    <!-- Brand 3 -->
+    <button class="brand-button" onclick="toggleCollapsible('brand3')">Tesla</button>
+    <div id="brand3" class="collapsible-content">
+        <div class="model">
+            <img src="images/model3.jpg" alt="Tesla Model 3">
+            <h3>Model 3</h3>
+            <p>An affordable electric sedan with autopilot features.</p>
+        </div>
+        <div class="model">
+            <img src="images/modelx.jpg" alt="Tesla Model X">
+            <h3>Model X</h3>
+            <p>A futuristic SUV with falcon wing doors.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleCollapsible(id) {
+        const content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1, h2 {
+    text-align: center;
+}
+.brand-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.brand-button:hover {
+    background-color: #0056b3;
+}
+.collapsible-content {
+    display: none;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.model {
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.model img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.model h3 {
+    margin: 5px 0;
+}

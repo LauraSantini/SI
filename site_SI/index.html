@@ -13,7 +13,7 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="cars.html">Cars</a></li>
+                <li><a href="cars/cars.html">Cars</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="user.html">User</a></li>
@@ -128,12 +128,16 @@
     </div>
 
     <script>
-        // Add Car function
-        function addCar() {
+         function addCar() {
             const matricula = document.getElementById('matricula').value;
             const disponibilidade = document.getElementById('disponibilidade').value;
             const custo = document.getElementById('custo').value;
             const numero_lugares = document.getElementById('numero_lugares').value;
+
+            if (!matricula || !disponibilidade || !custo || !numero_lugares) {
+                alert("Please fill in all fields.");
+                return;
+            }
 
             fetch('http://localhost:3000/add-car', {
                 method: 'POST',
@@ -148,49 +152,15 @@
                 })
             }).then(response => response.json())
             .then(data => {
-                alert(data.message);
+                const feedbackDiv = document.getElementById('feedback');
+                feedbackDiv.style.display = 'block';
+                feedbackDiv.style.color = 'green';
+                feedbackDiv.textContent = data.message;  // Show success message
             }).catch(error => {
-                alert('Error: ' + error.message);
-            });
-        }
-
-        // Update Car Cost function
-        function updateCost() {
-            const id_carro = document.getElementById('id_carro_cost').value;
-            const new_custo = document.getElementById('new_custo').value;
-
-            fetch('http://localhost:3000/update-cost', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    id_carro,
-                    new_custo
-                })
-            }).then(response => response.json())
-            .then(data => {
-                alert(data.message);
-            }).catch(error => {
-                alert('Error: ' + error.message);
-            });
-        }
-
-        // Remove Car function
-        function removeCar() {
-            const id_carro = document.getElementById('id_carro_remove').value;
-
-            fetch('http://localhost:3000/remove-car', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ id_carro })
-            }).then(response => response.json())
-            .then(data => {
-                alert(data.message);
-            }).catch(error => {
-                alert('Error: ' + error.message);
+                const feedbackDiv = document.getElementById('feedback');
+                feedbackDiv.style.display = 'block';
+                feedbackDiv.style.color = 'red';
+                feedbackDiv.textContent = 'Error: ' + error.message;  // Show error message
             });
         }
     </script>
